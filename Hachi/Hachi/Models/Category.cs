@@ -17,7 +17,7 @@ namespace Hachi.Models
         [Display(Name="Category Name")]
        
         [StringLength(100)]
-        public string  Name { get; set; }
+        public string  CategoryName { get; set; }
 
         [Required(ErrorMessage = "Display Order can not null")]
         [Display(Name = "Display Order")]
