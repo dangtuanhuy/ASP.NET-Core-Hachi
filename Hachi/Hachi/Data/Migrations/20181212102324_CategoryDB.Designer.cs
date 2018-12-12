@@ -11,9 +11,10 @@ using System;
 namespace Hachi.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181212102324_CategoryDB")]
+    partial class CategoryDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,7 +74,7 @@ namespace Hachi.Data.Migrations
 
             modelBuilder.Entity("Hachi.Models.Category", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("MyProperty")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("DisplayOrder");
@@ -82,7 +83,7 @@ namespace Hachi.Data.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.HasKey("Id");
+                    b.HasKey("MyProperty");
 
                     b.ToTable("Category");
                 });
