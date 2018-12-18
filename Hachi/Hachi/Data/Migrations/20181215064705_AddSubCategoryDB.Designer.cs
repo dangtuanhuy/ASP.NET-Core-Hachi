@@ -11,9 +11,10 @@ using System;
 namespace Hachi.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181215064705_AddSubCategoryDB")]
+    partial class AddSubCategoryDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -94,9 +95,8 @@ namespace Hachi.Data.Migrations
 
                     b.Property<int>("CategoryId");
 
-                    b.Property<string>("SubCategoryName")
-                        .IsRequired()
-                        .HasMaxLength(100);
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.HasKey("Id");
 
