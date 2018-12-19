@@ -13,7 +13,7 @@
     @Html.Partial("_ButtonPartial")
 </p>
 <div class="form-border">
-    <table class="table table-striped table-borderless">
+    <table class="table table-striped  table-bordered"  id="tablefillset">
         <thead>
             <tr>
                 <th>
@@ -22,6 +22,7 @@
                 <th>
                     @Html.DisplayNameFor(model => model.DisplayOrder)
                 </th>
+                
                 <th></th>
             </tr>
         </thead>
@@ -35,8 +36,8 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.DisplayOrder)
                     </td>
-                    <td>
-                       @Html.Partial("_ButtonCategory",item.Id)
+                    <td style="width:150px">
+                        @Html.Partial("_ButtonCategory", item.Id)
                     </td>
                 </tr>
             }
