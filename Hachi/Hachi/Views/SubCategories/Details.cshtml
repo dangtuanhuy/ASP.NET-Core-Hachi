@@ -1,34 +1,38 @@
-﻿@model Hachi.Models.Category
+﻿@model Hachi.Models.SubCategory
 
 @{
     ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <br />
-<h2>Category Type Details</h2>
+<h2>Sub Category Type Details</h2>
 <br />
 
 <div class="form-border">
+
+
 
     <hr />
     <fieldset disabled>
         <div class="form-group row">
             <div class="col-2">
-                <label asp-for="CategoryName" class="custom-label"></label>
+                <label asp-for="SubCategoryName" class="custom-label"></label>
             </div>
             <div class="col-4">
-                <input asp-for="CategoryName" class="form-control" />
+                <input asp-for="SubCategoryName" class="form-control" />
             </div>
         </div>
         <div class="form-group row">
             <div class="col-2">
-                <label asp-for="DisplayOrder" class="custom-label"></label>
+                <label asp-for="Category.CategoryName" class="custom-label"></label>
             </div>
             <div class="col-4">
-                <input asp-for="DisplayOrder" class="form-control" />
+                <input asp-for="Category.CategoryName" class="form-control" />
             </div>
         </div>
+       
     </fieldset>
-
     <div class="form-group">
         <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a> |
         <a asp-action="Index" class="btn btn-success">Back to List</a>
